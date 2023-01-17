@@ -1,0 +1,171 @@
+@import "_null.css";
+
+.app {
+  &__img--container {
+    //position: relative;
+    background: url("./img/wallpaper.jpg") 0 0 no-repeat;
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__container{
+    display: flex;
+    justify-content: center;
+
+  }
+  &__content {
+    margin: 90px 0 98px 0;
+    width: 389px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: #FFFFFF;
+  }
+  &__title {
+    margin-bottom: 25px;
+    font-size: 55px;
+    line-height: 66px;
+    color: #FFFFFF
+  }
+  @media (max-width: 420px) {
+    &__content {
+      width: 340px;
+    }
+
+  }
+  @media (max-width: 380px) {
+    &__content {
+      width: 300px;
+    }
+  }
+}
+
+
+
+.form {
+  &__wrapper {
+    padding: 41px 45px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #171929;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.7);
+    border-radius: 27px;
+  }
+  &__note {
+    max-width: 238px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 21.6px;
+  }
+  &__note-under {
+    margin: 11px 0;
+    text-align: center;
+
+    font-weight: 300;
+    color: #797EA3;
+  }
+  &__form {
+    position: relative;
+    width: 100%;
+  }
+  &__checkbox-wrapper {
+    display: flex;
+    column-gap: 12px;
+  }
+  &__checkbox {
+
+  }
+
+  &__checkbox-text {
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #797EA3;
+  }
+  &__checkbox-link {
+    margin-left: 3px;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #B9BEE5;
+    text-decoration: underline;
+  }
+  &__button-wrapper {
+    margin-top: 36px;
+    display: flex;
+    justify-content: center;
+  }
+  &__button {
+
+    padding: 11px 40px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+    color: #FFFFFF;
+    opacity: 70%;
+    font-weight: 400;
+    background-color: #2C2F47;
+    border-radius: 28px;
+    transition: 0.3s;
+  }
+  &__button:hover {
+    background-color: #FFFFFF;
+    color: #3F4363;
+  }
+}
+
+.input {
+  &__wrapper {
+    position: relative;
+    margin-bottom: 38px;
+    display: flex;
+    flex-direction: column;
+
+  }
+  &__input {
+    padding: 0 10px;
+    background-color: #171929;
+    border: none;
+    border-bottom: 1px solid #3F4363;
+    font-size: 18px;
+    line-height: 21.6px;
+
+    font-weight: 400;
+    color: #FFFFFF;
+    transition: 0.3s;
+  }
+  &__input_message {
+
+  }
+  &__hint {
+    position: absolute;
+    top: 4px;
+    left: 50px;
+    font-size: 12px;
+    color: brown;
+  }
+  &__label {
+    padding-bottom: 5px;
+    color: #797EA3;
+    transition: 0.3s;
+  }
+  &__input:hover {
+    border-bottom: 1px solid #FFFFFF;
+  }
+  &__input:focus {
+    outline: none;
+  }
+  &__label:hover {
+    color: #FFFFFF;
+  }
+
+
+}

@@ -1,0 +1,47 @@
+.input {
+  &__wrapper {
+    position: relative;
+    margin-bottom: 38px;
+    display: flex;
+    flex-direction: column;
+
+  }
+  &__input {
+    padding: 0 10px;
+    background-color: #171929;
+    border: none;
+    border-bottom: 1px solid #3F4363;
+    font-size: 18px;
+    line-height: 21.6px;
+
+    font-weight: 400;
+    color: #FFFFFF;
+    transition: 0.3s;
+  }
+  &__input_message {
+
+  }
+  &__hint {
+    position: absolute;
+    top: -12px;
+    left: 50px;
+    font-size: 12px;
+    color: brown;
+  }
+  &__label {
+    padding-bottom: 5px;
+    color: #797EA3;
+    transition: 0.3s;
+  }
+  &__input:hover {
+    border-bottom: 1px solid #FFFFFF;
+  }
+  &__input:focus {
+    outline: none;
+  }
+  &__label:hover {
+    color: #FFFFFF;
+  }
+
+
+}
