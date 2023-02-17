@@ -4,15 +4,13 @@ import {useInput} from "./hooks/useInput";
 import Input from "./components/other/Input/Input";
 
 function App() {
-
     const name = useInput('',{minLength:1,maxLength:20,isEmpty:true})
     const email = useInput('',{minLength:5,maxLength:40,isEmpty:true,email:true})
     const phone = useInput('',{minLength:1,maxLength:20,isEmpty:true,phone:true})
     const subject = useInput('',{minLength:1,maxLength:40,isEmpty:true})
+    console.log('name',name.value,name.isDirty,name.inputValid,name.errors)
     //const message = useInput('',{minLength:1,maxLength:20,isEmpty:true})
     const [message,setMessage] = useState<string>('')
-
-    console.log("render")
 
     const onClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault()
@@ -20,6 +18,7 @@ function App() {
         alert("click")
     }
 
+    // console.log("render")
     return (
         <main className='app__img--container'>
             <div className='app__container'>
@@ -39,7 +38,10 @@ function App() {
                                 <textarea value={message} onChange={(e) => setMessage(e.target.value)} className='input__input input__input_message' required id='input05' aria-label='qwerty'/>
                             </div>
                             <div className='form__checkbox-wrapper'>
-                                <input id='check' className='form__checkbox' type="checkbox"/>
+                                <label className='form__checkbox-label'>
+                                    <input className='form__checkbox' type="checkbox"/>
+                                    <div className='form__checkbox-div'></div>
+                                </label>
                                 <div className='form__checkbox-text'>
                                     I accept
                                     <a className='form__checkbox-link' href="">Terms and Privacy Policy</a>
@@ -48,13 +50,9 @@ function App() {
                             <div className='form__button-wrapper'>
                                 <button  onClick={(e) => onClick(e)} type='submit' className='form__button'>Send</button>
                             </div>
-
                         </form>
-
-
                     </div>
                 </div>
-
             </div>
         </main>
     );
